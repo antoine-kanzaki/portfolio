@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <css></css>
+  <title>京都水族館</title>
+</head>
+<body>
+
+  <div class="header">
+
+   <div class="header-mini">
+      <a href="#" class="header-menu-1">アクセス</a>
+      <a href="#" class="header-menu-2">年間パスポート</a>
+      <div class="header-menu-3"></div>
+   </div>
+
+  </div>
+  
+    <div class="main-page-title">
+      <p>近づくと、もっと好きになる</p>
+
+      <img src="images/suizokukan.jpg" alt="水族館のロゴ">
+    </div>
+    <video  id="bg-video" src="video.mp4" poster="images/timthumb.jpeg" autoplay loop muted></video>
+
+  
+    <div class="center">
+
+      <div class="main-picture">
+        <img src="images/azarasi.jpg"  alt="アザラシの画像"  id="bigimg">
+      </div>
+      <h2>画像をクリックすると変更されます</h2>
+      <ul>
+        <li><img src="images/azarasi.jpg" class="thumb" data-image="images/azarasi.jpg"></li>
+        <li><img src="images/kame.jpg" class="thumb" data-image="images/kame.jpg"></li>
+        <li><img src="images/penguin.jpg" class="thumb" data-image="images/penguin.jpg"></li>
+        <li><img src="images/same.jpg" class="thumb" data-image="images/same.jpg"></li>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="slide">
+      <div class="image_box">
+        <img id="main_image" src="images/azarasi.jpg">
+      </div>
+
+        <div class="nav">
+          <div id="prev"></div>
+          <div id="page"></div>
+          <div id="next"></div>
+        </div>
+        <h2>ボタンをクリックすると切り替わります</h2>
+    </div>
+
+
+
+    <script>
+      'use strict';
+
+      const thumbs = document.querySelectorAll('.thumb');
+      thumbs.forEach(function(item,index){
+        item.onclick = function() {
+          document.getElementById('bigimg').src = this.dataset.image;
+        }
+      });
+    </script>
+
+
+    <script>
+
+     const images = ["images/azarasi.jpg","images/kame.jpg", "images/penguin.jpg", "images/same.jpg"];
+
+     let current = 0;
+
+     function changeImages(num) {
+       if(current + num >=0 && current + num < images.length ){
+         current += num ;
+         document.getElementById('main_image').src = images[current];
+         pageNum();
+         //nextボタンとかを押すと、その度にpageNumの${current + 1}/${images.length}も切り替わらないといけないから書く
+         }
+     };
+
+     function pageNum () {
+      document.getElementById('page').textContent = `${current + 1}/${images.length}`;
+      };
+    //機能を作っただけで、まだ実行されてはいない
+
+    pageNum();
+    //最初にページが読み込まれた時のためのもの
+
+     document.getElementById('prev').onclick = function(){
+       changeImages(-1);
+     };
+
+
+     document.getElementById('next').onclick = function(){
+       changeImages(1);
+     };
+
+    </script>
+
+
+
+
+  
+</body>
+</html>

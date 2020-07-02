@@ -1,0 +1,190 @@
+body{
+  margin:0;
+  overflow-x:hidden;
+  background-image:url(images/b100.jpg);
+  background-size:cover;
+}
+.header{
+  position:fixed;
+  top:0;
+  right:0;
+  z-index: 100;
+}
+
+.header-mini{
+  display:flex;
+}
+
+.header-menu-1{
+width:100px;
+height:80px;
+background-color: deepskyblue;
+text-align: center;
+line-height:110px;
+font-size:13px;
+font-weight:bold;
+color:white;
+text-decoration: none;
+display:block;
+
+}
+
+.header-menu-1:hover{
+  cursor: pointer;
+}
+
+.header-menu-2{
+  width:100px;
+  height:80px;
+  background-color: mediumpurple;
+  text-align: center;
+  line-height:110px;
+  font-size:13px;
+  font-weight:bold;
+  color:white;
+  cursor: pointer;
+  display:block;
+  text-decoration: none;
+  
+}
+.header-menu-2:hover{
+  cursor: pointer;
+}
+
+.header-menu-3{
+  width:80px;
+  height:80px;
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+
+#bg-video{
+  display: block;
+  background: url('images/timthumb.jpeg') no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  z-index: 50;
+
+ }
+
+ .main-page-title p{
+  padding:0;
+  top:100px;
+  margin:auto;
+  font-family: serif;          
+  color: #fff;
+  font-size: 160%;
+  z-index: 1;
+  position: absolute;
+  left:32%;
+ }
+
+ .main-page-title img{
+  padding:0;
+  width:200px;
+  opacity:70%;
+  z-index: 1;
+  position: absolute;
+  left:38%;
+  top:160px;
+ }
+
+ .main-picture{
+   width:100%;
+   height:auto;
+   padding:auto;
+ }
+ 
+ .main-picture img{
+   width:720px;
+   height:auto;
+   margin:auto;
+   display:block;
+ }
+
+
+.center{
+  margin-top:50px;
+}
+
+.center h2{
+  color:white;
+  text-align: center;
+  font-size:140%;
+}
+
+.center ul{
+  display:flex;
+  justify-content: space-around;
+  margin:auto;
+  width:700px;
+  padding:0;
+  margin-top:20px;
+}
+
+ .center li img{
+   width:120px;
+   height:100px;
+ }
+
+ .center li{
+   list-style:none;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ .slide{
+   width:720px;
+   margin:auto;
+   margin-top:50px;
+   background-color:black;
+ }
+
+ .slide img{
+   width:720px;
+ }
+
+ .nav{
+   display:flex;
+   justify-content:center;
+ }
+ #prev{
+   margin-right:0.5rem;
+   width:30px;
+   height:30px;
+   background-image:url(images/arrow-left.png) ;
+   background-size:cover;
+ }
+ #next{
+  margin-right:0.5rem;
+  width:30px;
+  height:30px;
+  background-image:url(images/arrow-right.png) ;
+  background-size:cover;
+}
+#page{
+  color:white;
+  margin-right:0.5rem;
+}
+
+
+.slide h2{
+  color:white;
+  text-align: center;
+  font-size:140%;
+}
