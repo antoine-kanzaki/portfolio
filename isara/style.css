@@ -7,8 +7,9 @@ Author: mosyaozisan
 Version: 1.0
 */
 
-
-
+html{
+  overflow:hidden;
+}
 
 
 body{
