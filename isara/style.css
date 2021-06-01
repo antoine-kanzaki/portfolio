@@ -9,6 +9,13 @@ Version: 1.0
 
 
 
+html {
+  overflow-x: hidden !important;
+}
+
+
+
+
 body{
   width:100%;
   margin:0;
